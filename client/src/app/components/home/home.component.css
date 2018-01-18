@@ -1,12 +1,15 @@
 .page-wrapper{
     display: grid;
     grid-template-columns: 1fr;
+    
 }
 
 .header-wrapper{
-    margin: 2em;
+    padding: 2em;
     display: grid;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    background-color: #efefef;
+
 }
 
 

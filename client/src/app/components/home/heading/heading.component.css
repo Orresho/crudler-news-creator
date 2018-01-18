@@ -1,0 +1,13 @@
+.heading-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    padding: 15em;
+    background-color: #6b6b6b;
+}
+
+.content-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
