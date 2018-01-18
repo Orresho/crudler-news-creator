@@ -1,0 +1,10 @@
+.header-wrapper{
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr) 2fr;
+    justify-items: center;
+    
+}
+
+a{
+    min-width: 150px;
+}
