@@ -1,10 +1,18 @@
-.header-wrapper{
-    display: grid;
-    grid-template-columns: 2fr repeat(5, 1fr) 2fr;
-    justify-items: center;
-    
-}
 
 a{
-    min-width: 150px;
+    min-width: 100%;
+} 
+
+.butn {
+    color: white;
+    display: inline-block;
+    border: 1px solid #5993cd;
+    background: #5f6f81;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.butn:hover {
+    background: #5993cd;
+    color: white;
 }

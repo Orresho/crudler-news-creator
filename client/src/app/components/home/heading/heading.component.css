@@ -1,4 +1,4 @@
-.heading-wrapper{
+/* .heading-wrapper{
     display: grid;
     grid-template-columns: 1fr;
 
@@ -10,4 +10,22 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
+} */
+
+
+.heading-wrapper {
+    /* background: #5f6f81; */
+    padding: 2em 1em 0 1em;
+}
+
+.butn {
+    color: white;
+    display: inline-block;
+    background: #5f6f81;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.butn:hover {
+    background: #5993cd;
 }
