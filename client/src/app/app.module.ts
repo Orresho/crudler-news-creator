@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeadingComponent } from './components/home/heading/heading.component';
 import { BlogCreateComponent } from './components/posts/blogs/blog-create/blog-create.component';
 import { BlogTemplateComponent } from './components/posts/blogs/blog-template/blog-template.component';
+import { BlogsNavigationOptionsComponent } from './components/posts/blogs-navigation-options/blogs-navigation-options.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BlogTemplateComponent } from './components/posts/blogs/blog-template/bl
     HeaderComponent,
     HeadingComponent,
     BlogCreateComponent,
-    BlogTemplateComponent
+    BlogTemplateComponent,
+    BlogsNavigationOptionsComponent
   ],
   imports: [
     BrowserModule
