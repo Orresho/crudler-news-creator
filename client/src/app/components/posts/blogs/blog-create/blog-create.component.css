@@ -7,6 +7,17 @@ textarea{
     resize: none;
 }
 
+.butn{
+    color: white;
+    display: inline-block;
+    background: #5f6f81;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.butn:hover {
+    background: #5993cd;
+}
 
 /* FORM LARGER THAN MOBILE LATER */
 
