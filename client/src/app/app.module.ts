@@ -8,6 +8,7 @@ import { HeadingComponent } from './components/home/heading/heading.component';
 import { BlogCreateComponent } from './components/posts/blogs/blog-create/blog-create.component';
 import { BlogTemplateComponent } from './components/posts/blogs/blog-template/blog-template.component';
 import { BlogsNavigationOptionsComponent } from './components/posts/blogs-navigation-options/blogs-navigation-options.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BlogsNavigationOptionsComponent } from './components/posts/blogs-naviga
     BlogsNavigationOptionsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
