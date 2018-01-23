@@ -12,4 +12,24 @@ export class BlogsNavigationOptionsComponent implements OnInit {
   ngOnInit() {
   }
 
+  //********* */
+  // Blogs should be fetched only once from the server and then filtered based on date, rates, and views
+  //********* */
+  
+
+  // Fetch/filter most recent blogs
+  onMostRecent(){
+
+  }
+
+  // filter top rate blogs
+  onTopRated(){
+
+  }
+
+  // filter most viewed blogs
+  onMostViewed(){
+
+  }
+
 }
