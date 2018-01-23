@@ -1,0 +1,21 @@
+
+.create-post-form {
+    padding: 3em;
+}
+
+textarea{
+    resize: none;
+}
+
+
+/* FORM LARGER THAN MOBILE LATER */
+
+/* .page-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+} */
