@@ -8,30 +8,48 @@
       <h1>Welcome</h1>
       <a [routerLink]="['/home']">Back</a>
       <hr>
-      <form class="create-post-form">
+      <form [formGroup]="myForm" class="create-post-form" (submit)="onCreatePost()">
         <div class="form-group">
           <label for="title">Title</label>
-          <input type="text" class="form-control">
+          <input 
+            type="text" 
+            class="form-control"
+            formControlName="title">
         </div>
 
         <div class="form-group">
           <label for="thumbnail">Thumbnail image</label>
           <div class="well well-m">
-            <input type="file" accept="image/*">
+            <input 
+              type="text" 
+              class="form-control"
+              formControlName="thumbnailImage">
           </div>
         </div>
 
         <div class="form-group">
           <label for="preamble">Preamble</label>
-          <textarea name="preamble" id="preamble" cols="30" rows="3" class="form-control"></textarea>
+          <textarea 
+            name="preamble" 
+            id="preamble" 
+            cols="30" 
+            rows="3" 
+            class="form-control"
+            formControlName="preamble"></textarea>
         </div>
 
         <div class="form-group">
           <label for="bodyText">Body text</label>
-          <textarea name="bodyText" id="bodyText" cols="30" rows="15" class="form-control"></textarea>
+          <textarea 
+            name="bodyText" 
+            id="bodyText" 
+            cols="30" 
+            rows="15" 
+            class="form-control"
+            formControlName="bodyText"></textarea>
         </div>
 
-        <a type="submit" href="#" class="butn">Create</a>
+        <button [disabled]="!myForm.valid" type="submit" class="butn">Create</button>
       </form>
     </div>
 

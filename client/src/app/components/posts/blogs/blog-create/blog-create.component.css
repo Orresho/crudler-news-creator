@@ -19,6 +19,26 @@ textarea{
     background: #5993cd;
 }
 
+button {
+  border:none;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+/* If button is disabled */
+:disabled{
+    background: #5f6f81;
+    border: 1px solid red;
+}
+:disabled:hover{
+    background: #5f6f81;
+}
 /* FORM LARGER THAN MOBILE LATER */
 
 /* .page-wrapper{

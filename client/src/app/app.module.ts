@@ -9,6 +9,7 @@ import { BlogCreateComponent } from './components/posts/blogs/blog-create/blog-c
 import { BlogTemplateComponent } from './components/posts/blogs/blog-template/blog-template.component';
 import { BlogsNavigationOptionsComponent } from './components/posts/blogs-navigation-options/blogs-navigation-options.component';
 import { routing } from './app.routing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { routing } from './app.routing';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
