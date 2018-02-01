@@ -1,3 +1,4 @@
+import { PostService } from './../../../../_services/post.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
@@ -11,16 +12,17 @@ export class BlogCreateComponent implements OnInit {
   myForm: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private postService: PostService
   ) {
     this.createForm();
-   }
-
-  ngOnInit() {
-    
   }
 
-  onCreatePost(){
+  ngOnInit() {
+
+  }
+
+  onCreatePost() {
 
     const post = {
       title: this.myForm.get('title').value,
@@ -29,10 +31,13 @@ export class BlogCreateComponent implements OnInit {
       bodyText: this.myForm.get('bodyText').value
     };
 
-    console.log(post);
+    this.postService.addPost(post)
+      .subscribe(data => {
+        console.log(data);
+      })
   }
 
-  createForm(){
+  createForm() {
     this.myForm = this.formBuilder.group({
       title: ['', Validators.compose([
         Validators.required,
