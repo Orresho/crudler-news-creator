@@ -1,5 +1,19 @@
 <div class="thumbnail-wrapper">
 
+  <div *ngFor="let post of posts; let i = index">
+    <a href="#" class="butn" *ngIf="i < 5">
+      <div class="thumbnail">
+        <!-- <img src="{{post.thumbnailImage}}" alt="test"> -->
+        <div class="caption">
+          <h3>{{post.title}}</h3>
+          <p>{{post.preamble}}</p>
+          <p>{{post.createdAt}}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+
   <a href="#" class="butn">
     <div class="thumbnail">
       <img src="https://www.digimarc.com/public_images/blockchain-1500x600.jpg" alt="test">

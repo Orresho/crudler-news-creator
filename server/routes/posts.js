@@ -120,7 +120,7 @@ router.get('/', (req, res) => {
         if (err) {
             res.json({ success: false, message: err })
         } else {
-            res.json({ success: true, message: posts });
+            res.json({ success: true, posts: posts });
         }
     }).sort({createdAt: -1}); // sort by latest posts
 })

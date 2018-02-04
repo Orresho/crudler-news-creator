@@ -1,3 +1,4 @@
+import { PostService } from './../../../../_services/post.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogTemplateComponent implements OnInit {
 
-  constructor() { }
+  // Posts array
+  posts = [];
+
+  constructor(
+    private postService: PostService
+  ) { }
 
   ngOnInit() {
+    this.getAllPosts();
+    console.log(this.posts);
+  }
+
+  getAllPosts(){
+    this.postService.getAllPosts()
+      .subscribe(data => {
+        this.posts = data.posts;
+      });
   }
 
 }
