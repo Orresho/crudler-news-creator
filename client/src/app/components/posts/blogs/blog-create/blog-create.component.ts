@@ -10,6 +10,10 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 export class BlogCreateComponent implements OnInit {
 
   myForm: FormGroup;
+  message = '';
+  messageClass = '';
+  activateModal = false;
+
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,8 +37,37 @@ export class BlogCreateComponent implements OnInit {
 
     this.postService.addPost(post)
       .subscribe(data => {
-        console.log(data);
+        if (!data.success) {
+          // Show errr message
+          this.message = data.message;
+          this.messageClass = 'alert alert-danger'
+
+          // Remove error message after some time
+          setTimeout(() => {
+            this.message = '';
+            this.messageClass = ''
+          }, 5000);
+
+          
+        } else {
+
+          // Show success message
+          this.message = data.message;
+          this.messageClass = 'alert alert-success'
+
+          // Remove success message after some time
+          setTimeout(() => {
+            this.message = '';
+            this.messageClass = ''
+              
+          }, 2000);
+
+          // Modal to check if user wants to confirm
+          // this.activateModal = true;
+          this.myForm.reset();
+        }
       })
+
   }
 
   createForm() {
